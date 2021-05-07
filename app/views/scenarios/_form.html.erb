@@ -1,0 +1,43 @@
+<%= form_with(model: scenario) do |form| %>
+  <% if scenario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(scenario.errors.count, "error") %> prohibited this scenario from being saved:</h2>
+
+      <ul>
+        <% scenario.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="form-group mb-3">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control form-control-lg", placeholder: "title" %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.label :image, class: "form-label" %>
+      <%= form.text_field :image, class: "form-control", placeholder: "web-link to an image" %>
+    </div>
+
+    <div class="form-group mb-3">
+    <%= form.label :description, class: "form-label" %>
+    <%= form.text_area :description, class: "form-control", placeholder: "synopsis of your scenario" %>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.label :start, class: "form-label" %>
+      <%= form.date_select :start%>
+    </div>
+
+    <div class="form-group mb-3">
+      <%= form.label :end, class: "form-label" %>
+      <%= form.date_select :end %>
+    </div>
+    </br>
+    <div class="actions">
+    <button class="btn bg-light text-dark" type="submit">Submit form</button>
+    </div>
+  </form>
+<% end %>

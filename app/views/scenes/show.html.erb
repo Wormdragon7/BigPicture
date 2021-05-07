@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @scene.title %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <img src="<%= scene.image %>" class="img-thumbnail" alt="img-scene" >
+  </p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @scene.number %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @scene.description %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @scene.when %>
+</p>
+
+<p>
+  <strong>Scenario:</strong>
+  <%= @scene.scenario_id %>
+</p>
+
+<%= link_to 'Edit', edit_scenario_scene_path(@scenario, @scene) %> |
+<%= link_to 'Back', scenario_scenes_path(@scenario) %>

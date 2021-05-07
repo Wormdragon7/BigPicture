@@ -1,0 +1,122 @@
+
+body {
+  background-color: rgb(30, 28, 37);
+  color: #333;
+  margin: 33px; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: rgb(30, 28, 37);
+  padding: 10px;
+  font-size: 11px; }
+
+h1, h2, label {
+  color: #ffffff;
+}
+
+a:link {
+  color: rgb(255, 255, 255); }
+
+  a:visited {
+  color: rgb(209, 209, 209); }
+
+  a:hover {
+  color: rgb(141, 141, 141); }
+
+th {
+  padding-bottom: 5px; }
+
+td {
+  padding: 0 5px 7px; }
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #ffffff; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #ffffff; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+label {
+  $form-label-font-size: 30px;
+  display: block; }
+  div.form-group {
+    font-size: 25px;
+  }
+button.btn {
+  font-size: 20px;
+  font-weight: 200;
+}
+button.bg-secondary, button.bg-danger, button.bg-dark {
+  color:#ffffff;
+  font-size: 15px;
+  font-weight:bold;
+  
+}
+button.bg-light{
+  color:rgb(65, 65, 65);
+  font-size: 15px;
+  font-weight: bold;
+  a:link {
+    color: rgb(65, 65, 65); }
+  
+    a:visited {
+    color: rgb(44, 44, 44); }
+  
+    a:hover {
+    color: rgb(102, 102, 102); }
+}
+
+  img.img-thumbnail {
+    max-height:200px;
+    max-width:300px;
+    
+  }
+  
+  div.form-floating{
+    label{
+      color: rgb(30, 28, 37);
+      font-size: 20px;
+    }
+  }
+  div.form-check{
+    label{
+      color: #ffffff;
+      font-size: 20px;
+    }
+  }
+  div {
+    background-color: hsla(269, 16%, 65%, 0.1);
+    border: 10px;
+    border-color: hsla(269, 16%, 65%, 0.1) ;
+    border-radius: 8px;
+
+  }

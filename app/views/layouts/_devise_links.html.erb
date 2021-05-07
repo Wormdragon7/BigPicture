@@ -1,0 +1,19 @@
+<br>
+<% if user_signed_in? %>
+  
+  </br>
+  <button class="btn bg-light text-dark" type="submit"><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </button>
+         
+  
+  </br>
+  </br>
+  </div>
+<% else %>
+  
+  
+  <button class="btn bg-light text-dark" type="submit"><%= link_to('Login', new_user_session_path) %>  </button>
+  </br>
+  </br>
+  
+  </div>
+<% end %>

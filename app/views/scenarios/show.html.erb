@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="card" style="width: 18rem;">
+  <img src="<%= @scenario.image %>" class="card-img-top img-thumbnail" alt="img-scenario">
+  <div class="card-body">
+    <h5 class="card-title"><strong>Title:</strong><%= @scenario.title %></h5>
+    <p class="card-text"><strong>Description:</strong><%= @scenario.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><strong>Start:</strong>
+    <%= @scenario.start %></li>
+    <li class="list-group-item"><strong>End:</strong>
+    <%= @scenario.end %></li>
+    <li class="list-group-item"><strong>Author:</strong>
+    <%= @user.email %></li>
+  </ul>
+  <div class="card-body">
+  <button type="button" class="btn bg-dark"><%= link_to 'Edit Scenario', edit_scenario_path(@scenario) %> </button> |
+  <button type="button" class="btn bg-dark"><%= link_to 'Back', scenarios_path %></button>
+  </div>
+</div>
+</br></br>
+
+
+
+
+  
+
+<div>
+</br>
+<h2>Scene :</h2>
+</br>
+
+<table class="table table-dark table-striped table-borderless ">
+  <thead >
+    <tr>
+      <th >Scene Title</th>
+      <th>Image</th>
+      <th>Number</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Scenario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody >
+  <% for scene in @scenario.scenes %>
+      <tr>
+        <td><%= scene.title %></td>
+        <td><img src="<%= scene.image %>" class="img-thumbnail" alt="img-scene" ></td>
+        <td><%= scene.number %></td>
+        <td><%= scene.description %></td>
+        <td><%= scene.when %></td>
+        <td><%= scene.scenario.title %></td>
+        <td><%= link_to 'Edit Scene', edit_scenario_scene_path(@scenario, scene) %></td>
+        <td><%= link_to 'Destroy Scene', [@scenario, scene], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<button type="button" class="btn bg-light text-dark"><%= link_to 'Add Scene', new_scenario_scene_path(@scenario) %></button>
+
+<br>
+
+
